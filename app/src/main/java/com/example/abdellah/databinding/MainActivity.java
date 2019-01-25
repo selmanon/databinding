@@ -1,12 +1,10 @@
 package com.example.abdellah.databinding;
 
 import android.databinding.BaseObservable;
+import android.databinding.Bindable;
 import android.databinding.DataBindingUtil;
-import android.databinding.Observable;
-import android.databinding.ObservableField;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-
+import android.support.v7.app.AppCompatActivity;
 
 import com.example.abdellah.databinding.databinding.ActivityMainBinding;
 
@@ -14,14 +12,24 @@ import com.example.abdellah.databinding.databinding.ActivityMainBinding;
 public class MainActivity extends AppCompatActivity {
 
 
-    public static class Increment {
-        public final ObservableField<String> inc = new ObservableField<>();
+    public static class Increment extends BaseObservable{
+        public String inc;
+
+        @Bindable
+        public String getInc() {
+            return inc;
+        }
+
+        public void setInc(String inc) {
+            this.inc = inc;
+            notifyPropertyChanged(BR.inc);
+        }
     }
 
     public static class MyHandlers {
 
         public void onClickIncrement(Increment increment) {
-            increment.inc.set(Double.toString(Math.random()));
+            increment.setInc(Double.toString(Math.random()));
         }
     }
 
