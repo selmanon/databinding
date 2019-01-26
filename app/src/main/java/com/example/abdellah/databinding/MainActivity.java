@@ -1,8 +1,6 @@
 package com.example.abdellah.databinding;
 
-import android.databinding.BaseObservable;
 import android.databinding.DataBindingUtil;
-import android.databinding.Observable;
 import android.databinding.ObservableField;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
