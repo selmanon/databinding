@@ -3,8 +3,8 @@ package com.example.abdellah.databinding;
 import android.databinding.BaseObservable;
 import android.databinding.Bindable;
 import android.databinding.DataBindingUtil;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 
 import com.example.abdellah.databinding.databinding.ActivityMainBinding;
 
