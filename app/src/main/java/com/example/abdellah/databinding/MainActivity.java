@@ -4,7 +4,6 @@ import android.databinding.BindingAdapter;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.widget.ImageView;
 
 import com.example.abdellah.databinding.databinding.ActivityMainBinding;
