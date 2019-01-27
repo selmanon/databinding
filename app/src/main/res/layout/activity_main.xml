@@ -1,30 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
+
     <data>
-        <variable name="increment" type="com.example.abdellah.databinding.MainActivity.Increment"/>
-        <variable name="handler" type="com.example.abdellah.databinding.MainActivity.MyHandlers"/>
-
+        <variable
+            name="profile"
+            type="com.example.abdellah.databinding.MainActivity.Profile" />
     </data>
-<android.support.constraint.ConstraintLayout
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/dd"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:hint="Click me!"
-        android:text="@{increment.inc}"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:onClick="@{() -> handler.onClickIncrement(increment)}"
-        app:layout_constraintTop_toTopOf="parent" />
+    <android.support.constraint.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <ImageView
+            android:id="@+id/profile_avatar"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:imageUrl="@{profile.profileAvatar}"
+            android:contentDescription="@null" />
 
 
-
-</android.support.constraint.ConstraintLayout>
+    </android.support.constraint.ConstraintLayout>
 </layout>
