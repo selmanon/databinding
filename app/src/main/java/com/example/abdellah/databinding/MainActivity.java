@@ -1,6 +1,7 @@
 package com.example.abdellah.databinding;
 
 import android.databinding.BaseObservable;
+import android.databinding.Bindable;
 import android.databinding.BindingAdapter;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
@@ -22,11 +23,12 @@ public class MainActivity extends AppCompatActivity implements OnClickHandler {
     public void onClick(View view) {
         Toast.makeText(this, "click!",Toast.LENGTH_LONG).show();
         profile.profileAvatar = "http://i.imgur.com/DvpvklR.png";
-        activityMainBinding.setProfile(profile);
+        profile.notifyPropertyChanged(BR.profileAvatar);
     }
 
 
     public static class Profile extends BaseObservable {
+        @Bindable
         public String profileAvatar = "https://cdn.radiofrance.fr/s3/cruiser-production/2018/09/c37f1bf6-b36e-4f5a-a866-b46b686c38dc/838_picasso.jpg";
     }
 
